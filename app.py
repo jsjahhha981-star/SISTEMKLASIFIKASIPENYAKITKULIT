@@ -182,7 +182,7 @@ if not os.path.exists(MODEL_PATH):
         quiet=False
     )
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def load_model():
 
     base_model = Xception(
