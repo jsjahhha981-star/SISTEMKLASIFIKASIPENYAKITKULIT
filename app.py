@@ -170,32 +170,17 @@ section[data-testid="stSidebar"] *{
 # LOAD MODEL
 # =====================================================
 
-import gdown
 import os
-import streamlit as st
+import gdown
 
 MODEL_PATH = "model_weights.weights.h5"
 
 if not os.path.exists(MODEL_PATH):
-
-    with st.spinner(
-        "Mengunduh model AI..."
-    ):
-
-        url = (
-            "https://drive.google.com/uc?id="
-            "1JpOplrt29XE0U-HQfKWfR9csjJAFtjEc"
-        )
-
-        gdown.download(
-            url,
-            MODEL_PATH,
-            quiet=False
-        )
-
-        st.success(
-            "Model berhasil diunduh"
-        )
+    gdown.download(
+        "https://drive.google.com/uc?id=1JpOplrt29XE0U-HQfKWfR9csjJAFtjEc",
+        MODEL_PATH,
+        quiet=False
+    )
 
 @st.cache_resource
 def load_model():
