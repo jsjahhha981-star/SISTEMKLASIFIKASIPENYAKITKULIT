@@ -6,3 +6,4 @@ opencv-python-headless
 pillow
 openpyxl
 scikit-learn
+gdown
