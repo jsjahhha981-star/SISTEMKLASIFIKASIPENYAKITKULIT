@@ -574,7 +574,6 @@ menu = st.sidebar.radio(
         "Beranda",
         "Prediksi Gambar",
         "Riwayat Prediksi",
-        "Upload Dataset",
         "Tentang Model"
     ]
 )
